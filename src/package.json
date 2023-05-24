@@ -10,7 +10,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepublishOnly": "npm run build",
-    "compile-css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
   },
   "author": "",
   "license": "ISC",
