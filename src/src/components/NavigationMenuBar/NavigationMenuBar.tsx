@@ -18,9 +18,7 @@ export const NavigationMenuBar: React.FC<NavigationMenuBarProps> = ({
   return (
     <section
       className={
-        "max-w-lg border border-black rounded-3xl flex divide-x-2 justify-between divide-slate-400 absolute" +
-          !menuBarStatus && "hidden"
-      }
+        "max-w-lg border border-black rounded-3xl flex divide-x-2 justify-between divide-slate-400 absolute " }
     >
       <NavigationMenuBarItem title={leftItemTitle} content={leftItemContent} />
       <NavigationMenuBarItem

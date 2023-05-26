@@ -11,7 +11,7 @@ export default {
 
 const Template: StoryFn<PageHeaderProps> = (args) => <PageHeader {...args} />;
 
-export const Default = Template.bind({});
+export const Default: StoryFn<PageHeaderProps> = Template.bind({});
 
 Default.args = {
   text: "Hello, World!",

@@ -1,15 +1,26 @@
 import React from "react";
-import { StoryFn, Meta } from "@storybook/react";
-import { NavigationMenuBarItem,NavigationMenuBarItemProps } from "./NavigationMenuBarItem";
+import { StoryFn, Meta, StoryObj } from "@storybook/react";
+import {
+  NavigationMenuBarItem,
+  NavigationMenuBarItemProps,
+} from "./NavigationMenuBarItem";
 
 export default {
   title: "components/NavigationMenuBarItem",
   component: NavigationMenuBarItem,
   tags: ["autodocs"],
-} as Meta;
+} as Meta<typeof NavigationMenuBarItem>;
 
-const Template: StoryFn<NavigationMenuBarItemProps> = (args) => <NavigationMenuBarItem {...args} />;
+const Template: StoryObj<NavigationMenuBarItemProps> = {
+  render: (args: NavigationMenuBarItemProps) => (
+    <NavigationMenuBarItem {...args} />
+  ),
+};
 
-export const Default = {
-  ...Template
-}
+export const Default: StoryObj<NavigationMenuBarItemProps> = {
+  ...Template,
+  args: {
+    content: "This is some content",
+    title: "this is the title",
+  },
+};

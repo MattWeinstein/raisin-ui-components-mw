@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React from "react";
 
 export interface NavigationItemProps {
   text?: string;
@@ -13,9 +13,11 @@ export const NavigationItem: React.FC<NavigationItemProps> = ({
   children,
 }) => {
   return (
-    <div className="decoration-2 decoration-stone-300 underline-offset-2 hover:underline active:decoration-stone-800 ">
-      {link ? <a href={link}>{text}</a> : <div>{text}</div>}
-      {children}
-    </div>
+    <button className="active:red">
+      <div className="decoration-2 decoration-stone-300 underline-offset-2 hover:underline active:decoration-red-400 relative active:red">
+        {link ? <a href={link}>{text}</a> : <div>{text}</div>}
+        {children}
+      </div>
+    </button>
   );
 };
