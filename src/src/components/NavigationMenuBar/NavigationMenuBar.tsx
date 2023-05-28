@@ -4,12 +4,9 @@ import { NavigationMenuBarItem } from "../NavigationMenuBarItem/NavigationMenuBa
 export interface NavigationMenuBarProps {
   text?: string;
   link?: string;
-  menuBarStatus?: boolean;
 }
 
-export const NavigationMenuBar: React.FC<NavigationMenuBarProps> = ({
-  menuBarStatus,
-}) => {
+export const NavigationMenuBar: React.FC<NavigationMenuBarProps> = ({}) => {
   const leftItemTitle = "Docs";
   const leftItemContent = "Solve all your questions with our guides.";
 
@@ -18,7 +15,8 @@ export const NavigationMenuBar: React.FC<NavigationMenuBarProps> = ({
   return (
     <section
       className={
-        "max-w-lg border border-black rounded-3xl flex divide-x-2 justify-between divide-slate-400 absolute " }
+        " border border-black rounded-3xl flex divide-x-2 justify-between divide-slate-400 absolute top-8 right-0"
+      }
     >
       <NavigationMenuBarItem title={leftItemTitle} content={leftItemContent} />
       <NavigationMenuBarItem
